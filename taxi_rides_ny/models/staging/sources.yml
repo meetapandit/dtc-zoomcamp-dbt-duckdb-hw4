@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: staging
+    schema: staging
+    tables:
+      - name: raw_yellow_tripdata
+        external:
+          location: "gs://dezoomcamp_hw3_2026_mp/yellow_tripdata_*.csv.gz"
+          options:
+            format: CSV
+            skip_leading_rows: 1
+
+      - name: raw_green_tripdata
+        external:
+          location: "gs://dezoomcamp_hw3_2026_mp/green_tripdata_*.csv.gz"
+          options:
+            format: CSV
+            skip_leading_rows: 1

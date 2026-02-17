@@ -1,0 +1,11 @@
+services:
+  dbt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/app
+      - ./keys:/usr/app/keys
+    working_dir: /usr/app/taxi_rides_ny
+    environment:
+      DBT_PROFILES_DIR: /usr/app/taxi_rides_ny

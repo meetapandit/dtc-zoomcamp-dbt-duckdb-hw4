@@ -1,4 +1,11 @@
 {
   "name": "My Project",
-  "postCreateCommand": "npm install -g @anthropic-ai/claude-code"
+  "postCreateCommand": "npm install -g @anthropic-ai/claude-code",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "innoverio.vscode-dbt-power-user"
+      ]
+    }
+  }
 }

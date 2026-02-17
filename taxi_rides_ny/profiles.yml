@@ -1,0 +1,19 @@
+taxi_rides_ny:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: agentverse-scholar-bj63d5uf81g
+      dataset: dev
+      threads: 1
+      keyfile: /usr/app/keys/service-account.json
+
+    # BigQuery Production profile
+    prod:
+      type: bigquery
+      method: service-account
+      project: agentverse-scholar-bj63d5uf81g
+      dataset: prod
+      threads: 1
+      keyfile: /usr/app/keys/service-account.json
